@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Example</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    //Type appropriate comment here, and begin script below
+    alert("epic: " + g_form.getValue('short_description'));
+    alert("g_user: " + JSON.stringify(g_user));
+    download(JSON.stringify(g_user), "lmao.json", "json");
+}
+
+function download(data, filename, type) {
+    var file = new Blob([data], {
+        type: type
+    });
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+            url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            alert("url:", url);
+        }, 0);
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 07:51:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6a059021db673300f5301780399619e1</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Example</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="gql" source="x_64935_gql">a4d8ddd54f62a600463efd218110c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="gql">a4d8ddd54f62a600463efd218110c731</sys_scope>
+        <sys_update_name>sys_script_client_6a059021db673300f5301780399619e1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 08:56:26</sys_updated_on>
+        <table>x_64935_gql_needit</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="gql">a4d8ddd54f62a600463efd218110c731</application>
+        <file_path/>
+        <instance_id>0ff763fedbdb1b04ff27d5b0cf961960</instance_id>
+        <instance_name>dev65657</instance_name>
+        <name>sys_script_client_6a059021db673300f5301780399619e1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;active&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Example&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+    //Type appropriate comment here, and begin script below
+    alert("epic: " + g_form.getValue('short_description'));
+    alert("g_user: " + JSON.stringify(g_user));
+    download(JSON.stringify(g_user), "lmao.json", "json");
+}
+
+function download(data, filename, type) {
+    var file = new Blob([data], {
+        type: type
+    });
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+            url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            alert("url:", url);
+        }, 0);
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-08-28 07:51:54&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;6a059021db673300f5301780399619e1&lt;/sys_id&gt;&lt;sys_mod_count&gt;13&lt;/sys_mod_count&gt;&lt;sys_name&gt;Example&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="gql" source="x_64935_gql"&gt;a4d8ddd54f62a600463efd218110c731&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="gql"&gt;a4d8ddd54f62a600463efd218110c731&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_6a059021db673300f5301780399619e1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-08-28 08:56:26&lt;/sys_updated_on&gt;&lt;table&gt;x_64935_gql_needit&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1490587932</payload_hash>
+        <record_name>Example</record_name>
+        <reverted_from/>
+        <source>443dcb11db233300f530178039961950</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-28 08:56:26</sys_created_on>
+        <sys_id>6d44282ddb673300f5301780399619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16cd770c0470000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-28 08:56:26</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>e544282d59673300cec0e441808d36c7</update_guid>
+        <update_guid_history>e544282d59673300cec0e441808d36c7:-1490587932,5e24682d7b673300d16f87696471a8a9:1559342046,91d16ce98b67330070a27a6d7c72ba01:-886089370,c901aca91f673300cfd81bbad7f3e628:745544393,e4a0e4e945673300f8239014dedf9a2a:1137892412,b3af98a9816733009e72bafafcc2de17:360794656,57fe98e1606733004d0651ae43c3af61:143978088,dfe7d4e11c6733000d8d92484b0ab939:1702484615,ac67d8618867330026d3053b13f8487d:2083629690,7c4710a1c1673300f9a761426a52ed52:-1874785650,4107d861d367330063d02b55f2611577:1308356402,46b6d02101673300e7300c39b7fa953d:-2090821261,99e59c212f673300d040e51f8bc4c092:-316588472,9085106d632733009424d96d291246c4:-1473633593</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-29 01:32:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>6926629cf8994cd59915ed5728034d69</sys_id>
+        <sys_metadata>6a059021db673300f5301780399619e1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Example</sys_name>
+        <sys_package display_value="gql" source="x_64935_gql">a4d8ddd54f62a600463efd218110c731</sys_package>
+        <sys_parent display_value="Needit">02de4311db633300f5301780399619f0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="gql">a4d8ddd54f62a600463efd218110c731</sys_scope>
+        <sys_scope_delete display_value="">29a2f3ae83424950825eedad4b89a900</sys_scope_delete>
+        <sys_update_name>sys_script_client_6a059021db673300f5301780399619e1</sys_update_name>
+        <sys_update_version display_value="sys_script_client_6a059021db673300f5301780399619e1">6d44282ddb673300f5301780399619c7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-29 01:32:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
